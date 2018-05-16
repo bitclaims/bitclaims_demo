@@ -1,3 +1,6 @@
+### Install
+* Run sudo npm install node-cron
+
 ### Links
 
 + [Get started](https://sailsjs.com/get-started)
