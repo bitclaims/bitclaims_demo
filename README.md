@@ -1,5 +1,5 @@
 ### Install
-* Run sudo npm install node-cron
+* Run `sudo npm install node-cron`
 
 ### Links
 
