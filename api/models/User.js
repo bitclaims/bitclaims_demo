@@ -159,6 +159,11 @@ email status until they click the link in the confirmation email.`
       example: 1502844074211
     },
 
+    isAProvider: {
+	type: 'boolean',
+	description: ' One of the JS drop down button that allows the user to identify as a provider and sends a post request to the USER api'
+    },
+	
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
