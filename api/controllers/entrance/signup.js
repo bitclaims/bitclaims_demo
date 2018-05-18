@@ -42,6 +42,7 @@ the account verification message.)`,
       description: 'The user\'s full name.',
     },
 
+// Included a usertype
     userType:  {
       required: true,
       type: 'string',
