@@ -17,7 +17,7 @@ module.exports = {
 
 
   fn: async function (inputs, exits) {
-
+console.log(this.req.me)
     // Respond with view.
     return exits.success({
       currentSection: 'friends'

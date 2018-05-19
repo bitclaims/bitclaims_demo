@@ -17,8 +17,9 @@ module.exports = {
 
 
   fn: async function (inputs, exits) {
-
-    return exits.success();
+  console.log(this.req.me.id)
+  var familyList = await FamilyMember.find({accountHolder:this.req.me.id});
+  return exits.success({familyList:familyList})
 
   }
 
