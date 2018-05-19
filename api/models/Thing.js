@@ -48,7 +48,8 @@ module.exports = {
 
     borrowedBy: { model: 'User', description: 'The user who has requested to borrow this item.' },
 
+    
+
   },
 
 };
-
