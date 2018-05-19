@@ -13,3 +13,7 @@
 
 + Create a new family member entity under the account number 5aff9079240eea467864fa74
 http://localhost:1337/familymember/create?fullName=femi&age=4&accountHolder=5aff9079240eea467864fa74
+
+
++ Blueprint find family members based on a userID
+http://localhost:1337/familymember/find?accountHolder=5aff9079240eea467864fa74
