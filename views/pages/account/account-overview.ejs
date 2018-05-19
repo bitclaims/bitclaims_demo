@@ -16,13 +16,17 @@
       <div class="col-3">Name:</div>
       <div class="col"><strong>{{me.fullName}}</strong></div>
     </div>
-    {{me}}
+
     <div class="row">
       <div class="col-3">Email:</div>
       <div class="col">
         <strong :class="[me.emailStatus === 'unconfirmed' || me.emailStatus === 'changeRequested' ? 'text-muted' : '']">{{me.emailChangeCandidate ? me.emailChangeCandidate : me.emailAddress}}</strong>
         <span v-if="me.emailStatus === 'unconfirmed' || me.emailStatus === 'changeRequested'" class="badge badge-pill badge-warning">Unverified</span>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-3">User Type:</div>
+      <div class="col"><strong>{{me.userType}}</strong></div>
     </div>
     <hr/>
     <div class="row mb-3">
