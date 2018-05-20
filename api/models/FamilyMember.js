@@ -1,5 +1,5 @@
 /**
- * Thing.js
+ * FamilyMember.js
  *
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -12,30 +12,18 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-    imageUploadFd: {
+    fullName: {
       type: 'string',
-      description: 'The Skipper file descriptor string uniquely identifying the uploaded image.',
-      required: true
+      required: true,
+      description: 'Full representation of the user\'s name',
+      maxLength: 120,
+      example: 'Lisa Microwave van der Jenny'
     },
-
-    imageUploadMime: {
-      type: 'string',
-      description: 'The MIME type for the uploaded image.',
-      required: true
-    },
-
-    label: {
-      type: 'string',
-      description: 'A (very) brief description of the item.',
-      example: 'Waffle Iron'
-    },
-
-    expectedReturnAt: {
+    age: {
       type: 'number',
-      description: 'A JS timestamp (epoch ms) representing the moment of this item\'s expected return (or 0, if it is not currently lent out).',
+      description: 'Age of the member',
       example: 1502844074211
     },
-
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
@@ -44,11 +32,7 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-    owner: { model: 'User', description: 'The user who uploaded this item.' },
-
-    borrowedBy: { model: 'User', description: 'The user who has requested to borrow this item.' },
-
-    
+    accountHolder: { model: 'User', description: 'The account this family member belongs to' },
 
   },
 

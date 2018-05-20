@@ -1,0 +1,45 @@
+<div id="edit-family" v-cloak>
+
+  <div class="container">
+    <h1>Family Details</h1>
+    <hr/>
+    <ajax-form action="saveFamilyDetails" :syncing.sync="syncing" >
+
+      <div class="modal-body">
+
+        <div class="form-group" v-for="(member,index) in familyList">
+          <div class="row">
+
+            <div class="col">
+              <label v-if="index === 0">Name</label>
+              <input class="form-control" type="text" v-model="member.fullName" >
+            </div>
+
+            <div class="col">
+              <label v-if="index === 0">Email Address</label>
+              <input class="form-control" type="number" v-model="member.age" >
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <span class="add-more-button" @click="clickAddMoreButton()"><span class="fa fa-plus text-info mr-1"></span> Add more</span>
+        </div>
+
+         <p class="text-danger" v-if="formErrors.friends"><small>Please make sure all your invitees have a name and an email address.</small></p>
+         <p class="text-danger" v-if="cloudError"><small>An error occured while processing your request. Please check your information and try again, or <a href="/contact">contact support</a> if the error persists.</small></p>
+
+      </div>
+
+      <div class="modal-footer flex-row-reverse justify-content-start">
+        <ajax-button type="submit" :syncing="syncing" class="btn btn-primary ml-1">Add</ajax-button>
+        <button data-dismiss="modal" class="btn btn-outline-secondary mr-1">Cancel</button>
+      </div>
+
+    </ajax-form>
+
+  </div>
+
+</div>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>

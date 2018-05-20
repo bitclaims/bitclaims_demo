@@ -16,12 +16,17 @@
       <div class="col-3">Name:</div>
       <div class="col"><strong>{{me.fullName}}</strong></div>
     </div>
+
     <div class="row">
       <div class="col-3">Email:</div>
       <div class="col">
         <strong :class="[me.emailStatus === 'unconfirmed' || me.emailStatus === 'changeRequested' ? 'text-muted' : '']">{{me.emailChangeCandidate ? me.emailChangeCandidate : me.emailAddress}}</strong>
         <span v-if="me.emailStatus === 'unconfirmed' || me.emailStatus === 'changeRequested'" class="badge badge-pill badge-warning">Unverified</span>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-3">User Type:</div>
+      <div class="col"><strong>{{me.userType}}</strong></div>
     </div>
     <hr/>
     <div class="row mb-3">
@@ -49,6 +54,22 @@
         </span>
       </div>
     </div>
+    <div class="row mb-3">
+      <div class="col-sm-6">
+        <h4>My Family</h4>
+      </div>
+      <div class="col-sm-6">
+        <span class="float-sm-right">
+          <a class="btn btn-sm btn-outline-info account-settings-button" href="/account/family">Edit family Details</a>
+        </span>
+      </div>
+    </div>
+    <div v-for="member in me.members" class="row">
+
+      <div class="col">{{member.fullName}}</div>
+        <div class="col-3"> Age: {{member.age}}</div>
+    </div>
+
     <div v-if="isBillingEnabled && hasBillingCard">
       <div class="row">
         <div class="col-3">Credit card:</div>

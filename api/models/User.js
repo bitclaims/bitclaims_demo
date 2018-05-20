@@ -172,6 +172,8 @@ email status until they click the link in the confirmation email.`
 
     inboundFriendRequests: { collection: 'User', via: 'outboundFriendRequests', description: 'The friend requests this user has received.' },
 
+    members: { collection: 'familyMember',via: 'accountHolder', description: 'list of members registered under this account' }
+
   },
 
 

@@ -17,7 +17,7 @@ module.exports = {
 
 
   fn: async function (inputs, exits) {
-
+console.log(inputs)
     return exits.success();
 
   }
