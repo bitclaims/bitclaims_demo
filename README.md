@@ -17,3 +17,7 @@ http://localhost:1337/familymember/create?fullName=femi&age=4&accountHolder=5aff
 
 + Blueprint find family members based on a userID
 http://localhost:1337/familymember/find?accountHolder=5aff9079240eea467864fa74
+
+
++  Whenever you create a new AJAX format
+sails run rebuild-cloud-sdk
