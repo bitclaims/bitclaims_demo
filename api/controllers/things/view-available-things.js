@@ -23,6 +23,8 @@ module.exports = {
    var eBalance = await account.getEscrowBalance();
    var pBalance = await account.getProviderBalance();
 
+   console.log(">patient balence is " + pBalance)
+    console.log(">escrowBalanceis " + eBalance)
 
     var url = require('url');
 

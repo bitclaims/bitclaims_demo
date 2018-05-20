@@ -139,6 +139,15 @@ parasails.registerPage('available-things', {
       this._clearUploadThingModal();
     },
 
+    refreshPage: function() {
+      // Open the modal.
+      location.reload();
+    },
+
+    closeUploadThingModal: function() {
+      this._clearUploadThingModal();
+    },
+
     handleParsingUploadThingForm: function() {
       // Clear out any pre-existing error messages.
       this.formErrors = {};

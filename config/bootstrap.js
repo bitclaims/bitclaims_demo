@@ -13,12 +13,12 @@ var account = require("../api/controllers/AccountController");
 
 module.exports.bootstrap = async function(done) {
 
-  var task = cron.schedule('*/5 * * * * *', function() {
-    // console.log('immediately started');
-    account.testTransaction();
-    account.checkEscrowWallet();
-  }, false);
-  task.start();
+  // var task = cron.schedule('*/5 * * * * *', function() {
+  //   // console.log('immediately started');
+  //   account.testTransaction();
+  //   account.checkEscrowWallet();
+  // }, false);
+  // task.start();
 
 
   // Import dependencies

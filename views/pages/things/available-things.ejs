@@ -5,12 +5,12 @@
       <h1>Transactions</h1>
       <h2>View escrow contributions and payments.</h2>
       <div class="header-buttons">
-        <button class="btn btn-outline-primary" @click="clickAddButton()">Refresh</button>
+        <button class="btn btn-outline-primary" @click="refreshPage()">Refresh</button>
       </div>
       </br>
-      <h5>Your Balance: {{escrowBalance}}</h5>
+      <h5>Escrow Balance: {{escrowBalance}}</h5>
       </br>
-      <h5>Escrow Balance: {{providerBalance}}</h5>
+      <h5>Provider Balance: {{providerBalance}}</h5>
     </div>
     <div class="listings" v-if="things.length > 0">
       <div class="card" :key="'thing'+thing.id" :class="[thing.owner.id === me.id ? 'mine' : '', thing.unavailable ? 'not-available' : '']" v-for="thing in things">
