@@ -100,9 +100,9 @@ parasails.registerPage('edit-family', {
     },
 
     clickAddMoreButton: function() {
-      this.addFriendsFormData.friends.push({
+      this.familyList.push({
         fullName: '',
-        emailAddress: ''
+        age: null
       });
     },
 
