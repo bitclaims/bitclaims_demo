@@ -7,28 +7,14 @@ parasails.registerPage('edit-family', {
 
     friends: [],
 
-    familyList:[],
-
+familyListFormData: {
+  familyList: []
+},
     // The "virtual" portion of the URL which is managed by this page script.
 
 
     // Form data
-    addFriendsFormData: {
-      friends: [
-        {
-          fullName: '',
-          emailAddress: ''
-        },
-        {
-          fullName: '',
-          emailAddress: ''
-        },
-        {
-          fullName: '',
-          emailAddress: ''
-        }
-      ]
-    },
+
 
     // For tracking client-side validation errors in our form.
     // > Has property set to `true` for each invalid property in `addFriendsFormData`.
@@ -58,7 +44,7 @@ parasails.registerPage('edit-family', {
     // Attach any initial data from the server.
     _.extend(this, SAILS_LOCALS);
       console.log(this);
-
+this.familyListFormData.familyList = this.familyList
 
   },
 
@@ -73,24 +59,8 @@ parasails.registerPage('edit-family', {
     },
 
     _clearAddFriendsModal: function() {
-      this.goto('/friends');
-      // Reset form data.
-      this.addFriendsFormData = {
-        friends: [
-          {
-            fullName: '',
-            emailAddress: ''
-          },
-          {
-            fullName: '',
-            emailAddress: ''
-          },
-          {
-            fullName: '',
-            emailAddress: ''
-          }
-        ]
-      };
+
+
       this.formErrors = {};
       this.cloudError = '';
     },
@@ -110,22 +80,22 @@ parasails.registerPage('edit-family', {
       console.log('can you handle this?');
       // Clear out any pre-existing error messages.
       this.formErrors = {};
-
-      var argins = _.cloneDeep(this.addFriendsFormData);
-
+      console.log(this.familyListFormData)
+      var argins = _.cloneDeep(this.familyListFormData);
+      console.log(argins)
       // Check whether there are any rows with a name but not an email.
-      var isValidEmailAddress = parasails.require('isValidEmailAddress');
-      var hasAtLeastOneInvalidFriend = !_.isUndefined(_.find(argins.friends, (friend)=> {
-        if((friend.fullName !== '' || friend.emailAddress !== '') && !isValidEmailAddress(friend.emailAddress)) {
-          return true;
-        }
-        return false;
-      }));
 
-      if(hasAtLeastOneInvalidFriend) {
-        this.formErrors.friends = true;
-        return;
-      }
+      // var hasAtLeastOneInvalidFriend = !_.isUndefined(_.find(argins.friends, (friend)=> {
+      //   if((friend.fullName !== '' || friend.emailAddress !== '') && !isValidEmailAddress(friend.emailAddress)) {
+      //     return true;
+      //   }
+      //   return false;
+      // }));
+      //
+      // if(hasAtLeastOneInvalidFriend) {
+      //   this.formErrors.friends = true;
+      //   return;
+      // }
 
       // If there were any issues, they've already now been communicated to the user,
       // so simply return undefined.  (This signifies that the submission should be
@@ -135,20 +105,20 @@ parasails.registerPage('edit-family', {
       }
 
       // Otherwise, trim out any empty rows before submitting.
-      _.remove(argins.friends, {fullName: '', emailAddress: ''});
-
+      _.remove(argins.familyList, {fullName: ''});
+      console.log(argins)
       return argins;
     },
 
     submittedAddFriendsForm: function() {
-      var invitedFriends = _.filter(this.addFriendsFormData.friends, (friend)=>{
-        return friend.fullName !== '' && friend.emailAddress !== '';
-      });
-      console.log('invited friends:',invitedFriends);
+      // var invitedFriends = _.filter(this.familyListFormData.familyList, (friend)=>{
+      //   return friend.fullName !== '' && friend.emailAddress !== '';
+      // });
+      // console.log('invited friends:',invitedFriends);
       // Add the new friends to the requests list
-      this.me.outboundFriendRequests = this.me.outboundFriendRequests.concat(invitedFriends);
-      this.$forceUpdate();
-      this._clearAddFriendsModal();
+
+      // this.$forceUpdate();
+
     },
 
     clickRemoveFriend: function(friendId) {

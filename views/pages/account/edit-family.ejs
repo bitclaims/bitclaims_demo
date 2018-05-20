@@ -3,11 +3,11 @@
   <div class="container">
     <h1>Family Details</h1>
     <hr/>
-    <ajax-form action="saveFamilyDetails" :syncing.sync="syncing" >
+    <ajax-form action="saveFamilyDetails" :syncing.sync="syncing" :cloud-error.sync="cloudError" :handle-parsing="handleParsingAddFriendsForm" @submitted="submittedAddFriendsForm()">
 
       <div class="modal-body">
 
-        <div class="form-group" v-for="(member,index) in familyList">
+        <div class="form-group" v-for="(member,index) in familyListFormData.familyList">
           <div class="row">
 
             <div class="col">
