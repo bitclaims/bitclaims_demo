@@ -5,11 +5,13 @@ parasails.registerPage('edit-family', {
 
   data: {
 
+    me:{/* ... */ },
+
     friends: [],
 
-familyListFormData: {
-  familyList: []
-},
+    familyListFormData: {
+      familyList: []
+      },
     // The "virtual" portion of the URL which is managed by this page script.
 
 
@@ -44,7 +46,8 @@ familyListFormData: {
     // Attach any initial data from the server.
     _.extend(this, SAILS_LOCALS);
       console.log(this);
-this.familyListFormData.familyList = this.familyList
+
+      this.familyListFormData.familyList = this.familyList
 
   },
 
@@ -71,8 +74,10 @@ this.familyListFormData.familyList = this.familyList
 
     clickAddMoreButton: function() {
       this.familyList.push({
+        id: '',
         fullName: '',
-        age: null
+        age: null,
+        accountHolder:this.me.id
       });
     },
 
@@ -116,8 +121,9 @@ this.familyListFormData.familyList = this.familyList
       // });
       // console.log('invited friends:',invitedFriends);
       // Add the new friends to the requests list
-
-      // this.$forceUpdate();
+      console.log('after')
+location.reload();
+       this.$forceUpdate();
 
     },
 
