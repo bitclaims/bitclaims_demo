@@ -32,6 +32,11 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+    // Indicates one to many database
+    // - I have a property called accountHolder on my FamilyMember record which points to a User record
+    //- A user record has a property called "members" (short for familymembers)
+    //- which a list based on the family member collection
+    //- which is assessed via the accountHolder value of a familymember record
     accountHolder: { model: 'User', description: 'The account this family member belongs to' },
 
   },

@@ -1,3 +1,5 @@
+    <!-- Edit Profile block-->
+
 <div id="account-overview" v-cloak>
   <div class="container">
     <h1>My account</h1>
@@ -17,6 +19,7 @@
       <div class="col"><strong>{{me.fullName}}</strong></div>
     </div>
 
+    <!-- Change password block-->
     <div class="row">
       <div class="col-3">Email:</div>
       <div class="col">
@@ -58,6 +61,15 @@
         </span>
       </div>
     </div>
+
+
+    <!-- if/else -->
+    <div v-if="Math.random() > 0.5">
+     
+    
+    
+    <!-- EditFamily details block-->
+
     <div class="row mb-3">
       <div class="col-sm-6">
         <h4>My Family</h4>
@@ -68,11 +80,18 @@
         </span>
       </div>
     </div>
+    </div>
+    <div v-else>
+      Now you don't
+    </div>
+    
     <div v-for="member in me.members" class="row">
 
       <div class="col">{{member.fullName}}</div>
         <div class="col-3"> Age: {{member.age}}</div>
     </div>
+    
+   
 
     <div v-if="isBillingEnabled && hasBillingCard">
       <div class="row">

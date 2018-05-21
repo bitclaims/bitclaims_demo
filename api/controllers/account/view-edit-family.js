@@ -11,14 +11,21 @@ module.exports = {
 
     success: {
       viewTemplatePath: 'pages/account/edit-family'
+    },
+    redirect: {
+      description: 'Added a family member',
+      extendedDescription: 'Redirecting to account page."',
+      responseType: 'redirect',
     }
 
   },
 
 
   fn: async function (inputs, exits) {
-  console.log(this.req.me.id)
+  //console.log(this.req.me.id)
   var familyList = await FamilyMember.find({accountHolder:this.req.me.id});
+  
+  
   return exits.success({familyList:familyList})
 
   }

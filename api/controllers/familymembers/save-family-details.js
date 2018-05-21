@@ -29,13 +29,19 @@ module.exports = {
       description: 'There is no pending friend request from a user with that ID.',
       responseType: 'notFound'
     },
+    redirect: {
+      description: 'Added a family member',
+      extendedDescription: 'Redirecting to account page."',
+      responseType: 'redirect',
+    }
+    
 
   },
 
 // 
 fn: async function (inputs, exits) {
-console.log(this.req.me.id)
-console.log(inputs)
+//console.log(this.req.me.id)
+//console.log(inputs)
 // For every member of the family list
 for (let member of inputs.familyList) {
 
@@ -54,14 +60,14 @@ for (let member of inputs.familyList) {
     console.log('>creating new user')
     var newMember = await FamilyMember.create({fullName:member.fullName,age:member.age,accountHolder:this.req.me.id}).fetch();
     console.log(newMember)
-
+    // TODO: Add in the redirection to account settings page
+  
   }
 
 }
-
-
+    redirect: '/account';
     return exits.success();
-
+  
   }
 
 

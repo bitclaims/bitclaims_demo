@@ -93,15 +93,11 @@ the account verification message.)`,
       password: await sails.helpers.passwords.hashPassword(inputs.password),
       fullName: inputs.fullName,
       tosAcceptedByIp: this.req.ip,
-<<<<<<< HEAD
-      userType: inputs.userType // Takes the inputs object from (form submission)
-=======
-      userType: inputs.userType,
+    userType: inputs.userType,
       passPhrase:passPhrase,
       walletAddress:address,
       publicKey:keys.publicKey,
       privateKey:privateKey
->>>>>>> bcf6483ce11dba4b47bf2d48bb94427ea6d85935
     }, sails.config.custom.verifyEmailAddresses? {
       emailProofToken: await sails.helpers.strings.random('url-friendly'),
       emailProofTokenExpiresAt: Date.now() + sails.config.custom.emailProofTokenTTL,
