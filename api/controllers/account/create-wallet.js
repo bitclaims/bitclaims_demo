@@ -1,5 +1,7 @@
-
+// require the ark js module so we can use ark operations
 var ark = require("arkjs");
+var bip39 = require('bip39');
+
 module.exports = {
 
 
@@ -27,9 +29,19 @@ module.exports = {
 
 
   fn: async function (inputs, exits) {
+
+    var mnemonic = bip39.generateMnemonic();
+
+    console.log(mnemonic);
+
+    //generate keys based on a password string YOU decide
     var keys = ark.crypto.getKeys("passphrase");
 
     console.log(keys.publicKey);
+
+
+
+    //use your public to generate a public address
     var address = ark.crypto.getAddress(keys.publicKey);
 
     console.log("> new address generated!: " + address);
