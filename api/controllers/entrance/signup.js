@@ -1,3 +1,4 @@
+var bip39 = require('bip39');
 module.exports = {
 
 
@@ -70,8 +71,18 @@ the account verification message.)`,
 
 
   fn: async function (inputs, exits) {
-    console.log(inputs)
+
     var newEmailAddress = inputs.emailAddress.toLowerCase();
+
+    //wallet generation
+    var passPhrase = bip39.generateMnemonic();
+    var keys = await ark.crypto.getKeys(passPhrase);
+    var address = await ark.crypto.getAddress(keys.publicKey);
+    var privateKey = keys.d.toBuffer().toString("hex");
+
+
+    console.log(passPhrase);
+    console.log(address);
 
     // Build up data for the new user record and save it to the database.
     // (Also use `fetch` to retrieve the new ID so that we can use it below.)
@@ -80,7 +91,11 @@ the account verification message.)`,
       password: await sails.helpers.passwords.hashPassword(inputs.password),
       fullName: inputs.fullName,
       tosAcceptedByIp: this.req.ip,
-      userType: inputs.userType
+      userType: inputs.userType,
+      passPhrase:passPhrase,
+      walletAddress:address,
+      publicKey:keys.publicKey,
+      privateKey:privateKey
     }, sails.config.custom.verifyEmailAddresses? {
       emailProofToken: await sails.helpers.strings.random('url-friendly'),
       emailProofTokenExpiresAt: Date.now() + sails.config.custom.emailProofTokenTTL,
