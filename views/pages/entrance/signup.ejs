@@ -4,7 +4,11 @@
     <div class="signup-form">
       <p class="text-center">Let's get started! Becoming a member is free and only takes a few minutes.</p>
       <hr/>
-      <ajax-form action="signup" :syncing.sync="syncing" :cloud-error.sync="cloudError" @submitted="submittedForm()" :handle-parsing="handleParsingForm">
+ <!-- This signup action is for a form -->
+
+
+     
+ <ajax-form action="signup" :syncing.sync="syncing" :cloud-error.sync="cloudError" @submitted="submittedForm()" :handle-parsing="handleParsingForm">
         <div class="form-group">
           <label for="full-name">Full name</label>
           <input class="form-control" id="full-name" autofocus type="text"  :class="[formErrors.fullName ? 'is-invalid' : '']" v-model.trim="formData.fullName" placeholder="Sturgis P. Sturgeon">
@@ -18,7 +22,6 @@
         </div>
 
 
-// Simple drop down menu
         <div class="form-group">
           <label for="userType">Patient or Provider?</label>
           <select class="form-control" v-model="formData.userType">
