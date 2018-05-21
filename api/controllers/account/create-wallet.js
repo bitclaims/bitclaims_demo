@@ -30,7 +30,9 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
+    // Generate a random mnemonic (uses crypto.randomBytes under the hood), defaults to 128-bits of entropy
     var mnemonic = bip39.generateMnemonic();
+    // => 'seed sock milk update focus rotate barely fade car face mechanic mercy'
 
     console.log(mnemonic);
 
