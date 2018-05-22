@@ -35,6 +35,8 @@ module.exports.routes = {
   'GET /account/password':   { action: 'account/view-change-password' },
   'GET /account/profile':    { action: 'account/view-edit-profile' },
   'GET /account/family':    { action: 'account/view-edit-family' },
+  'GET /account/dpc':       {action: 'account/view-edit-dpc'},
+
 
   'GET /claim-account':      { action: 'entrance/view-claim-account' },
 
@@ -57,6 +59,7 @@ module.exports.routes = {
   'POST  /api/v1/entrance/update-password-and-login':    { action: 'entrance/update-password-and-login' },
   'POST  /api/v1/entrance/claim-account-and-login':   { action: 'entrance/claim-account-and-login' },
   'POST  /api/v1/familydetails':    { action: 'familymembers/save-family-details' },
+  'POST /api/v1/dpcdetails':        {action: 'dpc/save-dpc-details'},
 
   'POST  /api/v1/deliver-contact-form-message':       { action: 'deliver-contact-form-message' },
 

@@ -1,6 +1,6 @@
-/**
- * Dpc.js
- *
+
+
+ /*
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
@@ -22,7 +22,6 @@ module.exports = {
     
     Description:{
       type: 'string',
-      required: true,
       description: 'Description of Direct PAtient Care Plan',
       maxLength: 120,
       example: 'Entials pro-bono surgeries'
@@ -38,6 +37,35 @@ module.exports = {
       description: 'Number of Staff',
       example: 300
     },
+    priceFamMem:{
+      type: 'number',
+      description: 'Price per family member',
+      example: 300
+    },
+    upfrontPayment:{
+      type: 'number',
+      description: 'upfront payment',
+      example: 300
+    },
+    discountYearlyUpfront:{
+      type: 'number',
+      description: 'Discount for yearly upfront payment',
+      example: 300
+    },
+    daysHours:{
+      type: 'string',
+      description: 'Days and Hours of Plan',
+      maxLength: 120,
+      example: 'Monday: 10am - 6pm'
+    },
+    billSched:{
+      type: 'string',
+      description: 'Billing schedule',
+      maxLength: 120,
+      example: 'Monday at 6am'
+    },
+    
+    
     //Days and hours of operation
     //billing schedule
 
@@ -55,3 +83,4 @@ module.exports = {
   },
 
 };
+

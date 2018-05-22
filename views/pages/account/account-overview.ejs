@@ -88,7 +88,7 @@
         </div>
         <div class="col-sm-6">
           <span class="float-sm-right">
-            <a class="btn btn-sm btn-outline-info account-settings-button" href="/account/profile">Edit Direct Care Plan</a>
+            <a class="btn btn-sm btn-outline-info account-settings-button" href="/account/dpc">Edit Direct Care Plan</a>
           </span>
         </div>
       </div>
@@ -114,17 +114,30 @@
         <div class="col-3">Number of Staff Members:</div>
         <div class="col"><strong>{{plan.numberStaff}}</strong></div>
       </div>
-
-    </div>
-      <!--
       <div class="row">
-        <div class="col-3">Days and Hours of Operation:</div>
-        <div class="col"><strong>{{me.dpcPlan[0].planName.numberStaff}}</strong></div>
+        <div class="col-3">Price per family member:</div>
+        <div class="col"><strong>{{plan.priceFamMem}}</strong></div>
+      </div>
+      <div class="row">
+        <div class="col-3">Upfront payment Price:</div>
+        <div class="col"><strong>{{plan.upfrontPayment}}</strong></div>
+      </div>
+      <div class="row">
+        <div class="col-3">Discount for yearly upfront :</div>
+        <div class="col"><strong>{{plan.discountYearlyUpfront}}</strong></div>
+      </div>
+      <div class="row">
+        <div class="col-3">Days and Hours:</div>
+        <div class="col"><strong>{{plan.daysHours}}</strong></div>
       </div>
       <div class="row">
         <div class="col-3">Billing Schedule:</div>
-        <div class="col"><strong>{{dpcPlan.walletAddress}}</strong></div>
-      </div>-->
+        <div class="col"><strong>{{plan.billSched}}</strong></div>
+      </div>
+      
+
+    </div>
+      
     </div>
 
 
