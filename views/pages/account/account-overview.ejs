@@ -62,7 +62,7 @@
 
 
     <!-- If/else conditional Vue rendering checking the usertype-->
-    <div v-if="me.userType === 'Provider'"><!-- Checks if patient-->
+    <div v-if="me.userType === 'Patient'"><!-- Checks if patient-->
       <div class="row mb-3">
         <div class="col-sm-6">
           <h4>My Family</h4>
@@ -81,6 +81,7 @@
     </div>
     <!-- Checks if provider-->
     <div v-else>
+      
       <div class="row mb-3">
         <div class="col-sm-6">
           <h4>Direct Care Plan information</h4>
@@ -91,34 +92,34 @@
           </span>
         </div>
       </div>
+      
       <div class="row">
         <div class="col-3">Name of Plan: </div>
-        <div class="col"><strong>{{me.fullName}}</strong></div>
+        <div class="col"><strong>{{me.dpcPlan[0].planName}}</strong></div>
       </div>
   
       <div class="row">
-        <div class="col-3">Description:</div>
-        <div class="col">
-          <strong :class="[me.emailStatus === 'unconfirmed' || me.emailStatus === 'changeRequested' ? 'text-muted' : '']">{{me.emailChangeCandidate ? me.emailChangeCandidate : me.emailAddress}}</strong>
-          <span v-if="me.emailStatus === 'unconfirmed' || me.emailStatus === 'changeRequested'" class="badge badge-pill badge-warning">Unverified</span>
-        </div>
+        <div class="col-3">Description: </div>
+        <div class="col"><strong>{{me.dpcPlan[0].Description}}</strong></div>
       </div>
+      
       <div class="row">
         <div class="col-3">Number of Patients:</div>
-        <div class="col"><strong>{{me.userType}}</strong></div>
+        <div class="col"><strong>{{me.dpcPlan[0].numberPatients}}</strong></div>
       </div>
       <div class="row">
         <div class="col-3">Number of Staff Members:</div>
-        <div class="col"><strong>{{me.walletAddress}}</strong></div>
+        <div class="col"><strong>{{me.dpcPlan[0].numberStaff}}</strong></div>
       </div>
+      <!--
       <div class="row">
         <div class="col-3">Days and Hours of Operation:</div>
-        <div class="col"><strong>{{me.walletAddress}}</strong></div>
+        <div class="col"><strong>{{me.dpcPlan[0].planName.numberStaff}}</strong></div>
       </div>
       <div class="row">
         <div class="col-3">Billing Schedule:</div>
-        <div class="col"><strong>{{me.walletAddress}}</strong></div>
-      </div>
+        <div class="col"><strong>{{dpcPlan.walletAddress}}</strong></div>
+      </div>-->
     </div>
 
 

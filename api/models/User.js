@@ -186,7 +186,7 @@ email status until they click the link in the confirmation email.`
 
     members: { collection: 'familyMember',via: 'accountHolder', description: 'list of members registered under this account' },
 
-    /*dpcPlan: { collection: 'DPC',via: 'accountHolder', description: 'DPC care plan under this account' }*/
+    dpcPlan: { collection: 'dpc',via: 'accountHolder', description: 'DPC care plan under this account' }
 
   },
 

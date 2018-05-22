@@ -154,7 +154,8 @@ will be disabled and/or hidden in the UI.
             .populate('friends')
             .populate('inboundFriendRequests')
             .populate('outboundFriendRequests')
-            .populate('members');
+            .populate('members')
+            .populate('dpcPlan');
 
             // If the logged-in user has gone missing, log a warning,
             // wipe the user id from the requesting user agent's session,
