@@ -7,20 +7,82 @@
 
       <div class="modal-body">
 
-        <div class="form-group" v-for="(member,index) in dpcListFormData.dpcList">
-          <div class="row">
-            <!-- maybe if we switch this to row as well-->
-            <div class="col">
-              <label v-if="index === 0">Name</label>
-              <input class="form-control" type="text" v-model="member.planName" >
-            </div>
+<div class="form-group" v-for="(member,index) in dpcListFormData.dpcList">
 
-            <div class="col">
+
+
+    <!-- <div class="col">
+      <label v-if="index === 0">Name</label>
+      <input class="form-control" type="text" v-model="member.planName">
+    </div> -->
+
+    <div class="form-group">
+      <div class="col-md-6">
+        <label v-if="index === 0">Name</label>
+        <input class="form-control" type="text" v-model="member.planName">
+      </div>
+    </div>
+
+    <div class="form-group">
+  <div class="col-md-6">
+    <label v-if="index === 0">Description</label>
+    <textarea rows="4" cols="50" class="form-control" type="text" v-model="member.Description"></textarea>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-md-6">
+    <label v-if="index === 0">Number of Patients</label>
+    <input class="form-control" type="number" v-model="member.numberPatients">
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-md-6">
+    <label v-if="index === 0">Number of Staff</label>
+    <input class="form-control" type="number" v-model="member.numberStaff">
+  </div>
+</div>
+
+<div class="form-group">
+         <div class="col-md-6">
+           <label v-if="index === 0">Price Per Family Member</label>
+           <input class="form-control" type="number" v-model="member.priceFamMem">
+         </div>
+       </div>
+
+       <div class="form-group">
+         <div class="col-md-6">
+           <label v-if="index === 0">Upfront Payment Price</label>
+           <input class="form-control" type="number" v-model="member.upfrontPayment">
+         </div>
+       </div>
+
+       <div class="form-group">
+   <div class="col-md-6">
+     <label v-if="index === 0">Discount for Yearly Upfront Payments</label>
+     <input class="form-control" type="number" v-model="member.discountYearlyUpfront">
+   </div>
+ </div>
+ <div class="form-group">
+   <div class="col-md-6">
+     <label v-if="index === 0">Days and Hours</label>
+     <input class="form-control" type="text" v-model="member.daysHours">
+   </div>
+ </div>
+ <div class="form-group">
+   <div class="col-md-6">
+     <label v-if="index === 0">Billing Schedule</label>
+     <input class="form-control" type="text" v-model="member.billSched">
+   </div>
+ </div>
+
+            <!-- <div class="col">
               <label v-if="index === 0">Description</label>
               <input class="form-control" type="text" v-model="member.Description" >
             </div>
-           
-           
+
+
             <div class="col">
               <label v-if="index === 0">Number of Patients</label>
               <input class="form-control" type="number" v-model="member.numberPatients" >
@@ -34,9 +96,9 @@
             <div class="col">
               <label v-if="index === 0">Price Per Family Member</label>
               <input class="form-control" type="number" v-model="member.priceFamMem" >
-            </div>
+            </div> -->
 
-            <div class="col">
+            <!-- <div class="col">
               <label v-if="index === 0">Upfront Payment Price</label>
               <input class="form-control" type="number" v-model="member.upfrontPayment" >
             </div>
@@ -54,11 +116,11 @@
             <div class="col">
               <label v-if="index === 0">Billing Schedule</label>
               <input class="form-control" type="text" v-model="member.billSched" >
-            </div>
+            </div> -->
 
-            
 
-          </div>
+
+
         </div>
 
         <div class="form-group">
