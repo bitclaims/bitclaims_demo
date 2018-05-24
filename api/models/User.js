@@ -153,10 +153,21 @@ email status until they click the link in the confirmation email.`
       description: 'A JS timestamp (epoch ms) representing the moment at which this user most recently interacted with the backend while logged in (or 0 if they have not interacted with the backend at all yet).',
       example: 1502844074211
     },
-    isAPatient: {
-      type: 'boolean',
+    userType: {
+      type: 'string',
       description: 'A JS timestamp (epoch ms) representing the moment at which this user most recently interacted with the backend while logged in (or 0 if they have not interacted with the backend at all yet).',
-      example: 1502844074211
+    },
+    passPhrase:{
+      type: 'string'
+    },
+    publicKey:{
+      type:'string'
+    },
+    privateKey:{
+      type:'string'
+    },
+    walletAddress:{
+      type:'string'
     },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
@@ -172,6 +183,10 @@ email status until they click the link in the confirmation email.`
     outboundFriendRequests: { collection: 'User', via: 'inboundFriendRequests', description: 'The friend requests this user has sent.' },
 
     inboundFriendRequests: { collection: 'User', via: 'outboundFriendRequests', description: 'The friend requests this user has received.' },
+
+    members: { collection: 'familyMember',via: 'accountHolder', description: 'list of members registered under this account' },
+
+    dpcPlan: { collection: 'dpc',via: 'accountHolder', description: 'DPC care plan under this account' }
 
   },
 
