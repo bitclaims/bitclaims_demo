@@ -1,7 +1,7 @@
 <div id="account-overview" v-cloak>
   <div class="container">
     <h1>My account</h1>
-    <hr/>
+    <hr/> <!-- hr tag to show a grey line-->
     <div class="row mb-3">
       <div class="col-sm-6">
         <h4>Personal information</h4>
@@ -16,6 +16,7 @@
       <div class="col-3">Name:</div>
       <div class="col"><strong>{{me.fullName}}</strong></div>
     </div>
+
     <div class="row">
       <div class="col-3">Email:</div>
       <div class="col">
@@ -23,7 +24,16 @@
         <span v-if="me.emailStatus === 'unconfirmed' || me.emailStatus === 'changeRequested'" class="badge badge-pill badge-warning">Unverified</span>
       </div>
     </div>
+    <div class="row">
+      <div class="col-3">User Type:</div>
+      <div class="col"><strong>{{me.userType}}</strong></div>
+    </div>
+    <div class="row">
+      <div class="col-3">Wallet Address:</div>
+      <div class="col"><strong>{{me.walletAddress}}</strong></div>
+    </div>
     <hr/>
+
     <div class="row mb-3">
       <div class="col-sm-6">
         <h4>Password</h4>
@@ -49,6 +59,93 @@
         </span>
       </div>
     </div>
+
+
+    <!-- If/else conditional Vue rendering checking the usertype-->
+    <div v-if="me.userType === 'Patient'"><!-- Checks if patient-->
+      <div class="row mb-3">
+        <div class="col-sm-6">
+          <h4>My Family</h4>
+        </div>
+        <div class="col-sm-6">
+          <span class="float-sm-right">
+            <a class="btn btn-sm btn-outline-info account-settings-button" href="/account/family">Edit family Details</a>
+          </span>
+        </div>
+      </div>
+
+      <div v-for="member in me.members" class="row">
+        <div class="col">{{member.fullName}}</div>
+          <div class="col-3"> Age: {{member.age}}</div>
+      </div>
+    </div>
+    <!-- Checks if provider-->
+    <div v-else>
+
+      <div class="row mb-3">
+        <div class="col-sm-6">
+          <h4>Direct Care Plan information</h4>
+        </div>
+        <div class="col-sm-6">
+          <span class="float-sm-right">
+            <a class="btn btn-sm btn-outline-info account-settings-button" href="/account/dpc">Edit Direct Care Plan</a>
+          </span>
+        </div>
+      </div>
+
+      <div v-for="plan in me.dpcPlan" class="">
+
+
+      <div class="row">
+        <div class="col">Name of Plan: </div>
+        <div class="col"><strong>{{plan.planName}}</strong></div>
+      </div>
+
+      <div class="row">
+        <div class="col">Description: </div>
+        <div class="col"><strong>{{plan.Description}}</strong></div>
+      </div>
+<br>
+      <div class="row">
+        <div class="col">Number of Patients:</div>
+        <div class="col"><strong>{{plan.numberPatients}}</strong></div>
+      </div>
+      <div class="row">
+        <div class="col">Number of Staff Members:</div>
+        <div class="col"><strong>{{plan.numberStaff}}</strong></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">Price per family member:</div>
+        <div class="col"><strong>{{plan.priceFamMem}}</strong></div>
+      </div>
+      <div class="row">
+        <div class="col">Upfront payment Price:</div>
+        <div class="col"><strong>{{plan.upfrontPayment}}</strong></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">Discount for yearly upfront :</div>
+        <div class="col"><strong>{{plan.discountYearlyUpfront}}</strong></div>
+      </div>
+      <div class="row">
+        <div class="col">Days and Hours:</div>
+        <div class="col"><strong>{{plan.daysHours}}</strong></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">Billing Schedule:</div>
+        <div class="col"><strong>{{plan.billSched}}</strong></div>
+      </div>
+
+
+    </div>
+
+    </div>
+
+
+
+
     <div v-if="isBillingEnabled && hasBillingCard">
       <div class="row">
         <div class="col-3">Credit card:</div>

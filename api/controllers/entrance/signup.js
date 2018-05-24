@@ -1,3 +1,4 @@
+var bip39 = require('bip39');
 module.exports = {
 
 
@@ -40,6 +41,14 @@ the account verification message.)`,
       type: 'string',
       example: 'Frida Kahlo de Rivera',
       description: 'The user\'s full name.',
+    },
+
+// Included a usertype
+    userType:  {
+      required: true,
+      type: 'string',
+      example: 'Frida Kahlo de Rivera',
+      description: 'The user\'s full name.',
     }
 
   },
@@ -66,13 +75,29 @@ the account verification message.)`,
 
     var newEmailAddress = inputs.emailAddress.toLowerCase();
 
+    //wallet generation
+    var passPhrase = bip39.generateMnemonic();
+    var keys = await ark.crypto.getKeys(passPhrase);
+    var address = await ark.crypto.getAddress(keys.publicKey);
+    var privateKey = keys.d.toBuffer().toString("hex");
+
+
+    console.log(passPhrase);
+    console.log(address);
+
     // Build up data for the new user record and save it to the database.
     // (Also use `fetch` to retrieve the new ID so that we can use it below.)
-    var newUserRecord = await User.create(Object.assign({
+    // Adds to the database
+    var newUserRecord = await User.create(Object.assign({ // User is a database object is from a models folder.  The user is definied in the models folder
       emailAddress: newEmailAddress,
       password: await sails.helpers.passwords.hashPassword(inputs.password),
       fullName: inputs.fullName,
-      tosAcceptedByIp: this.req.ip
+      tosAcceptedByIp: this.req.ip,
+    userType: inputs.userType,
+      passPhrase:passPhrase,
+      walletAddress:address,
+      publicKey:keys.publicKey,
+      privateKey:privateKey
     }, sails.config.custom.verifyEmailAddresses? {
       emailProofToken: await sails.helpers.strings.random('url-friendly'),
       emailProofTokenExpiresAt: Date.now() + sails.config.custom.emailProofTokenTTL,
@@ -92,7 +117,7 @@ the account verification message.)`,
         stripeCustomerId
       });
     }
-
+console.log(newUserRecord);
     // Store the user's new id in their session.
     this.req.session.userId = newUserRecord.id;
 

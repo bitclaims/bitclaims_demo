@@ -1,3 +1,9 @@
 views/*
 .tmp/*
 .git/*
+assets/js/*
+assets/*
+assets/**/*.js
+**/.tmp/**
+**/views/**
+**/assets/**
