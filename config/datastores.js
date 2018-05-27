@@ -49,7 +49,7 @@ module.exports.datastores = {
     *                                                                          *
     ***************************************************************************/
     adapter: 'sails-mongo',
-    url: 'mongodb://bitclaims:bitclaims@ds061268.mlab.com:61268/bitclaims',
+    url: 'mongodb://femi:femi@ds231229.mlab.com:31229/fcc',
 
   },
 

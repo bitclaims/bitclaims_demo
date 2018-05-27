@@ -39,7 +39,7 @@ module.exports.routes = {
 
 
   'GET /claim-account':      { action: 'entrance/view-claim-account' },
-
+  'GET /landingpage':       { action: 'landing-page' },
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗

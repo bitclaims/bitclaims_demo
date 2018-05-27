@@ -5,7 +5,14 @@
 
     <% /* Viewport tag for sensible mobile support */ %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <% /* Script tags should normally be included further down the page- but scripts
     that load fonts are a special exception to the rule.  (We include them up here
     above the <body> to prevent the page flickering when fonts load.)  */ %>
@@ -25,51 +32,18 @@
 
     <% /* Auto-injected <link> tags: */ %>
     <!--STYLES-->
-    <link rel="stylesheet" href="/dependencies/bootstrap-4/bootstrap-4.css">
     <link rel="stylesheet" href="/dependencies/jquery-ui/jquery-ui.css">
     <link rel="stylesheet" href="/dependencies/jquery-ui/jquery-ui.structure.css">
     <link rel="stylesheet" href="/dependencies/jquery-ui/jquery-ui.theme.css">
     <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/pages/landingpage.css">
     <!--STYLES END-->
+    <link rel="stylesheet" href="/styles/pages/landingpage.css">
   </head>
 
   <body>
-    <div id="page-wrap">
-      <header id="page-header" class="navbar navbar-expand-sm flex-column flex-md-row justify-content-between">
-        <a class="navbar-brand mr-0" href="/"><img height="30" alt="Ration.io logo" src="/images/bitclaims-logo.png"/></a>
-        <div class="navbar-nav flex-row">
-          <!-- LOGGED-IN NAVIGATION -->
-          <% if(me) { %>
-          <a class="nav-item nav-link text-dark ml-2 mr-2 <%= typeof currentSection !== 'undefined' && currentSection === 'friends' ? 'current' : ''%>"
-              href="/friends">Buyer's Club</a>
-          <a class="nav-item nav-link text-dark ml-2 mr-2 <%= typeof currentSection !== 'undefined' && currentSection === 'things' ? 'current' : ''%>"
-            href="/things">Transactions</a>
-          <a class="nav-item nav-link text-dark ml-2 mr-2 <%= typeof currentSection !== 'undefined' && currentSection === 'contact' ? 'current' : ''%>"
-            href="/contact">Help</a>
-          <!-- Only in desktop nav -->
-          <div class="nav-item dropdown d-none d-md-block">
-            <a class="nav-link dropdown-toggle text-dark ml-2 <%= typeof currentSection !== 'undefined' && currentSection === 'contact' ? 'current' : ''%>" id="header-account-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
-            <div class="dropdown-menu account-menu" aria-labelledby="header-account-menu-link">
-              <a class="dropdown-item" href="/account">Settings</a>
-              <a class="dropdown-item" href="/logout">Sign out</a>
-            </div>
-          </div>
-          <!-- Only in mobile nav -->
-          <a class="nav-item nav-link text-dark ml-2 mr-2 d-block d-md-none" href="/account">Account</a>
-          <a class="nav-item nav-link text-dark ml-2 mr-2 d-block d-md-none" href="/logout">Sign out</a>
-          <% } else { %>
-          <!-- LOGGED-OUT NAVIGATION -->
-          <a class="nav-item nav-link ml-2 mr-2" href="/faq">FAQ</a>
-          <a class="nav-item nav-link ml-2 mr-2" href="/login">Log in</a>
-          <!-- Only in desktop nav -->
-          <div class="form-inline d-none ml-2 d-md-block" >
-            <a class="btn btn-outline-info" href="/signup">Sign up</a>
-          </div>
-          <!-- Only in mobile nav -->
-          <a class="nav-item nav-link text-info ml-2 d-block d-md-none" href="/signup">Sign up</a>
-          <% } %>
-        </div>
-      </header>
+    <div >
+
 
       <!-- Alert if email has not been confirmed -->
       <% if(me&&me.emailChangeCandidate) { %>
@@ -88,7 +62,7 @@
 
       <%- body %>
 
-      <footer id="page-footer" class="navbar navbar-light justify-content-between flex-row-reverse">
+      <!-- <footer id="page-footer" class="navbar navbar-light justify-content-between flex-row-reverse">
         <div class="nav">
           <small class="nav-item"><a class="nav-link text-info" href="/contact">Contact<span class="d-none d-sm-inline"> us</span></a></small>
           <small class="nav-item"><a class="nav-link text-info" href="/legal/terms">Terms<span class="d-none d-sm-inline"> of Use</span></a></small>
@@ -98,7 +72,7 @@
           <% } %>
         </div>
         <small class="copy">Copyright &copy; 2018 <a target="_blank" href="https://bitclaims.io/">BitClaims, LLC</a> <br class="xs-only"/>All rights reserved.</small>
-      </footer>
+      </footer> -->
     </div>
 
 
@@ -125,7 +99,6 @@
     <script src="/dependencies/jquery.min.js"></script>
     <script src="/dependencies/vue.js"></script>
     <script src="/dependencies/vue-router.js"></script>
-    <script src="/dependencies/bootstrap-4/bootstrap-4.bundle.js"></script>
     <script src="/dependencies/cloud.js"></script>
     <script src="/dependencies/jquery-ui/jquery-ui.js"></script>
     <script src="/dependencies/parasails.js"></script>
