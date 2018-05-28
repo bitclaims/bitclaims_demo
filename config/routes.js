@@ -44,7 +44,8 @@ module.exports.routes = {
   'GET /basicinfo':       { action: 'entrance/basic-info' },
   'GET /age':       { action: 'entrance/age' },
   'GET /location':       { action: 'entrance/location' },
-
+  'GET /coverage':       { action: 'entrance/coverage' },
+  'GET /loading':       { action: 'entrance/loading' },
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝

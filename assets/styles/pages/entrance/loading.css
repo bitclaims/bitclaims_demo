@@ -1,0 +1,23 @@
+.number-crunching{
+  -webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+background-image: linear-gradient(to top, #30a3e4, #56c2ff);
+
+background-image: linear-gradient(to top, #30a3e4, #56c2ff);
+ font-family: IBMPlexSans;
+ font-size: 20px;
+ font-weight: normal;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: 1.7;
+ letter-spacing: -0.5px;
+ -webkit-background-clip: text;
+ background-clip: text;
+ -webkit-text-fill-color: transparent;
+ font-family: 'IBM Plex Sans', sans-serif, FontAwesome;
+}
+
+.hiddenback{
+  visibility: hidden
+}
