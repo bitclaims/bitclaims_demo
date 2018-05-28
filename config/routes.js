@@ -42,6 +42,8 @@ module.exports.routes = {
   'GET /landingpage':       { action: 'landing-page' },
   'GET /familyselect':       { action: 'entrance/family-select' },
   'GET /basicinfo':       { action: 'entrance/basic-info' },
+  'GET /age':       { action: 'entrance/age' },
+  'GET /location':       { action: 'entrance/location' },
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
