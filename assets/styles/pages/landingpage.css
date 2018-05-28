@@ -43,8 +43,8 @@
 
   position:absolute;
   overflow: hidden;
-
-
+  top: -20px;
+z-index: -1;
 }
 
 @media only screen and (min-width: 768px) {
@@ -78,6 +78,7 @@
     margin: 0 auto;
     position:absolute;
     left:-15%;
+
   }
 
 }
