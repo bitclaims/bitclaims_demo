@@ -41,6 +41,7 @@ module.exports.routes = {
   'GET /claim-account':      { action: 'entrance/view-claim-account' },
   'GET /landingpage':       { action: 'landing-page' },
   'GET /familyselect':       { action: 'entrance/family-select' },
+  'GET /basicinfo':       { action: 'entrance/basic-info' },
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
