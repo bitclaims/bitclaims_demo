@@ -5,6 +5,7 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
+    "ajv-keywords": "^3.2.0",
     "arkjs": "^0.2.1",
     "async": "2.0.1",
     "bip39": "^2.5.0",
@@ -22,7 +23,8 @@
     "sails-mysql": "^1.0.0-15",
     "skipper-s3": "^0.5.9",
     "socket.io-redis": "5.2.0",
-    "sync-request": "6.0.0"
+    "sync-request": "6.0.0",
+    "vue": "^2.5.16"
   },
   "devDependencies": {
     "eslint": "4.11.0",

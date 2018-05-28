@@ -1,0 +1,88 @@
+.menu-line{
+
+  height: 2px;
+  border: solid 2px #eeeff6;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  }
+  
+  
+  .entrance-question{
+  
+    font-family: 'IBM Plex Sans', sans-serif;
+  
+  font-size: 26px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: -0.5px;
+  color: #222436;
+  }
+  
+  .entrance-subtext{
+  
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.39;
+  letter-spacing: normal;
+  color: #7c7f8f;
+  }
+  
+  .who-option{
+    display: flex;
+       align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 68px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: solid 1px #56c2ff;
+  }
+  
+  .who-option-text{
+  font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: #222436;
+    margin-left: 5%;
+  }
+  
+  .who-option-radio{
+  
+    margin-left: 50%;
+  }
+  
+  .how-many-children{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.55;
+  letter-spacing: -0.5px;
+  color: #222436;
+  }
+  
+  .how-many-children-button{
+    height: 45px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.39;
+  letter-spacing: normal;
+  color: #222436;
+  width: 100%;
+  margin-bottom: 20px;
+  }
+  
