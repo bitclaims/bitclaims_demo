@@ -17,39 +17,25 @@ html, body {
   // padding-bottom: @footer-height;
 
   header {
-    a:not(.btn) {
-      cursor: pointer;
-      border-bottom: 3px solid transparent;
-      &.nav-item {
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-right: 20px;
-        &:hover {
-          border-bottom-color: @border-lt-gray;
-        }
-        &.current {
-          border-bottom-color: @accent-teal;
-        }
-        &:last-child {
-          margin-right: 0px;
-        }
-      }
-      &.dropdown-toggle {
-        &:hover {
-          color: @accent-teal!important;
-        }
-      }
-    }
-    .dropdown-menu.account-menu {
-      left: auto;
-      right: 0px;
-    }
+    height: 52px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 0 0 #d3d4de, 1px 0 0 0 #d3d4de;
   }
+
+
 
   // App-wide styles for our ajax buttons
   .ajax-button {
     .ajax-button();
   }
+}
+
+.bitclaims-nav{
+  height: 52px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 0 0 #d3d4de, 1px 0 0 0 #d3d4de;
+width:100%;
+
 }
 
 #page-footer {
