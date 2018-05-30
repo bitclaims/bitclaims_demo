@@ -2,6 +2,6 @@
   display: inline-block;
   vertical-align: middle;
   float: none;
-  background-color: green;
+  background-color: green !important;
   height: 100px;
 }
