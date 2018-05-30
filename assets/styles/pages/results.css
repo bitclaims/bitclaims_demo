@@ -1,7 +1,11 @@
-.vcenter{
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
-  background-color: green;
-  height: 100px;
+.firstrow{
+  font-size: 30px !important;
+}
+
+.box2{
+  background-color: black !important;
+}
+
+.box3{
+  background-color: black !important;
 }
