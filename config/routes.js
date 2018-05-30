@@ -43,6 +43,8 @@ module.exports.routes = {
   'GET /familyselect':       { action: 'entrance/family-select' },
   'GET /basicinfo':       { action: 'entrance/basic-info' },
   'GET /provider-or-consumer': {action: 'entrance/provider-or-consumer'},
+  'GET /results': {action: 
+  'entrance/results'},
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗

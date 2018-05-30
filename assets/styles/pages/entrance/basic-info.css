@@ -1,8 +1,16 @@
-.basic-info-input {
+.basic-info-input-active {
   width: 100%;
   height: 50px;
   background-color: #ffffff;
   border: solid 2px #937eea;
+  border-radius: 1.5%;
+}
+
+.basic-info-input-inactive {
+  width: 100%;
+  height: 50px;
+  background-color: #f9fafb;
+  border: solid 1px #d3d4de;
   border-radius: 1.5%;
 }
 

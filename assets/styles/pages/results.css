@@ -1,0 +1,7 @@
+.vcenter{
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  background-color: green;
+  height: 100px;
+}
