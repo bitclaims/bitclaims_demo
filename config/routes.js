@@ -47,6 +47,8 @@ module.exports.routes = {
   'GET /search':            {action: 'entrance/search'},
   'GET /maps':            {action: 'entrance/maps'},
   'GET /filters':            {action: 'entrance/filters'},
+  'GET /account':            {action: 'entrance/account'},
+
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
