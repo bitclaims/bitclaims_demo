@@ -39,7 +39,14 @@ module.exports.routes = {
 
 
   'GET /claim-account':      { action: 'entrance/view-claim-account' },
-
+  'GET /landingpage':       { action: 'landing-page' },
+  'GET /familyselect':       { action: 'entrance/family-select' },
+  'GET /basicinfo':       { action: 'entrance/basic-info' },
+  'GET /provider-or-consumer': {action: 'entrance/provider-or-consumer'},
+  'GET /results':             {action: 'entrance/results'},
+  'GET /search':            {action: 'entrance/search'},
+  'GET /maps':            {action: 'entrance/maps'},
+  'GET /filters':            {action: 'entrance/filters'},
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗

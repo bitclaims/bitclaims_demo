@@ -13,43 +13,53 @@ html, body {
   height: auto!important;
   min-height: 100%;
   position: relative;
-  padding-bottom: @footer-height;
+  width:100%;
+  // padding-bottom: @footer-height;
 
-  header {
-    a:not(.btn) {
-      cursor: pointer;
-      border-bottom: 3px solid transparent;
-      &.nav-item {
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-right: 20px;
-        &:hover {
-          border-bottom-color: @border-lt-gray;
-        }
-        &.current {
-          border-bottom-color: @accent-teal;
-        }
-        &:last-child {
-          margin-right: 0px;
-        }
-      }
-      &.dropdown-toggle {
-        &:hover {
-          color: @accent-teal!important;
-        }
-      }
-    }
-    .dropdown-menu.account-menu {
-      left: auto;
-      right: 0px;
-    }
-  }
+
+
 
   // App-wide styles for our ajax buttons
   .ajax-button {
     .ajax-button();
   }
 }
+
+.bitclaims-nav{
+  height: 52px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 0 0 #d3d4de, 1px 0 0 0 #d3d4de;
+width:100%;
+display: flex;
+   align-items: center;
+z-index: 100;
+margin-bottom: 10px;
+}
+.nav-text{
+  width: 213px;
+   height: 24px;
+   font-family: IBMPlexSans;
+   font-size: 20px;
+   font-weight: normal;
+   font-style: normal;
+   font-stretch: normal;
+   line-height: 1.2;
+   letter-spacing: normal;
+   color: #7c7f8f;
+font-family: 'IBM Plex Sans', sans-serif;
+margin-bottom: 0px !important;
+margin-left: 5%;
+}
+
+.nav-icon{
+width: 24px;
+height: 24px;
+border-radius: 50%;
+background-color: #6e4df9;
+margin-left: 5%;
+}
+
+
 
 #page-footer {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -65,7 +75,7 @@ html, body {
 
 @media (max-width: 800px) {
   #page-wrap {
-    padding-bottom: 75px;
+    // padding-bottom: 75px;
     #page-footer {
       height: 75px;
       .copy, .nav {
@@ -85,7 +95,7 @@ html, body {
 
 @media (max-width: 450px) {
   #page-wrap {
-    padding-bottom: 85px;
+    // padding-bottom: 85px;
     #page-footer {
       height: 85px;
       .xs-only {
@@ -94,4 +104,3 @@ html, body {
     }
   }
 }
-
