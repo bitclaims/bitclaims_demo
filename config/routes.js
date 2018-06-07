@@ -48,6 +48,21 @@ module.exports.routes = {
   'GET /maps':            {action: 'entrance/maps'},
   'GET /filters':            {action: 'entrance/filters'},
   'GET /account':            {action: 'entrance/account'},
+  'GET /login-patient':            {action: 'entrance/login-patient'},
+  'GET /forgot-pass':            {action: 'entrance/forgot-pass'},
+  'GET /patient-age':            {action: 'entrance/patient-age'},
+  'GET /patient-location':            {action: 'entrance/patient-location'},
+  'GET /family':            {action: 'entrance/family'},
+  'GET /patient-coverage':            {action: 'entrance/patient-coverage'},
+  'GET /coverage-search':            {action: 'entrance/coverage-search'},
+  'GET /patient-loading':            {action: 'entrance/patient-loading'},
+
+
+
+
+
+
+
 
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
