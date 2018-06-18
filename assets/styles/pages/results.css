@@ -1,11 +1,286 @@
-.firstrow{
-  font-size: 30px !important;
+.search-container {
+  background-color: #eeeff6;
+  height: 1000px;
 }
 
-.box2{
-  background-color: black !important;
+.button-row {
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 1px 0 0 #d3d4de, 1px 0 0 0 #d3d4de;
 }
 
-.box3{
-  background-color: black !important;
+.account-button {
+  background: #ffffff;
+  height: 60px;
+  box-shadow: 0 1px 0 0 #d3d4de, 1px 0 0 0 #d3d4de;
+  color: #595c6e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.care-button {
+  background: rgba(86, 194, 255, 0.2);
+  height: 60px;
+  color: #30a3e4;
+  box-shadow: 0 1px 0 0 #d3d4de, 1px 0 0 0 #d3d4de;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-circle-pic {
+  width: 25%;
+  height: 55%;
+  margin-right: 3%;
+}
+
+.empty-line {
+  height: 1%;
+}
+
+.bigger-line {
+  height: 1.5%
+}
+
+.user-circle-pic {
+  width: 25%;
+  height: 55%;
+  margin-right: 3%;
+}
+
+.bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar {
+  background-color: white;
+  height: 42px;
+  width: 88%;
+  font-size: 15px;
+  color: #7c7f8f;
+  border: 1px solid #937eea;
+}
+
+.inner-search-container {
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+
+.inner-search-container-pic {
+  width: 8%;
+  height: 35%;
+  margin-right: 3%;
+}
+
+.inner-filter-pic {
+  margin-left: 55%;
+  width: 8%;
+  height: 34%;
+  margin-right: 3%;
+}
+
+.inner-map-pic {
+  width: 6%;
+  height: 32%;
+  margin-right: 3%;
+}
+
+.entrance-comment {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: -0.5px;
+  color: #222436;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #222436;
+  letter-spacing: 1px;
+}
+
+.dpc-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dpc-middle-box {
+  width: 95%;
+  background-color: white;
+  border: 1px solid #eeeff6;
+  border-radius: 5px;
+}
+
+.hospital-name {
+  height: 70px;
+  border-bottom: 2px solid #eeeff6;
+}
+
+.logo-container {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clinic-pic {
+  width: 130%;
+  height: 50%;
+  margin-right: 3%;
+}
+
+.primary-care-info {
+  height: 70px;
+}
+
+.primary-care-header {
+  height: 30px;
+  color: #7c7f8f;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  margin-top: 3%;
+}
+
+.hospital-header {
+  height: 30px;
+  color: #000000;
+  font-size: 120%;
+}
+
+.arrow-box {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-pic {
+  color: #d3d4de;
+  font-size: 20px;
+}
+
+.dpc-mid-row {
+  height: 90px;
+  border-bottom: 2px solid #eeeff6;
+}
+
+.dpc-mid-row-container-info {
+  height: 90px;
+  font-size: 15px;
+  color: #7c7f8f;
+}
+
+.amount-doctors {
+  height: 45px;
+  margin-left: .00%;
+  display: flex;
+  align-items: center;
+}
+
+.amount-members-one-row {
+  height: 45px;
+  margin-left: .00%;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.stetho-pic {
+  font-size: 20px;
+  color: #56c2ff;
+  margin-right: 4%;
+}
+
+.user-pic {
+  width: 9%;
+  height: 40%;
+  margin-right: 3%;
+}
+
+.distance-box {
+  height: 15%;
+  margin-left: .00%;
+  display: flex;
+  align-items: center;
+}
+
+.map-pic {
+  font-size: 20px;
+  color: #56c2ff;
+  margin-right: 4%;
+}
+
+.dpc-price-holder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dpc-price-box {
+  height: 40%;
+  width: 110%;
+  background-color: #eeeff6;
+  font-size: 160%;
+  color: #595c6e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribute-row {
+  height: 47px;
+  font-size: 80%;
+  text-align: center;
+}
+
+.attribute {
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-attribute-box {
+  height: 55%;
+  width: 120%;
+  background-color: rgba(106, 242, 188, 0.23);
+  color: #36ac7d;
+  border: 1px solid #36ac7d;
+  border-radius: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-attribute-box {
+  height: 55%;
+  width: 100%;
+  background-color: rgba(254, 176, 228, 0.19);
+  color: #fe56c5;
+  border: 1px solid #fe56c5;
+  border-radius: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.third-attribute-box {
+  height: 55%;
+  width: 100%;
+  background-color: rgba(255, 132, 63, 0.3);
+  color: #e86e29;
+  border: 1px solid#e86e29;
+  border-radius: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -13,6 +13,7 @@
     "lodash": "3.10.1",
     "moment": "^2.19.3",
     "node-cron": "^1.2.1",
+    "nodemon": "^1.17.5",
     "sails": "^1.0.0-44",
     "sails-hook-apianalytics": "^2.0.0",
     "sails-hook-organics": "^0.13.0",
