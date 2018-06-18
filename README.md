@@ -1,3 +1,30 @@
+### Instructions
+* Run `sudo npm install node-cron`
+* Run `sudo npm install sails -g`
+* Run `sudo sails lift` within bitclaims_demo folder
+* Go to local browser and type in "http://localhost:1337/" to check if the program is running
+* Check through the test endpoints below and open each screen on its own tab
+  * http://localhost:1337/landingpage
+  * http://localhost:1337/basicinfo
+  * http://localhost:1337/provider-or-consumer
+  * http://localhost:1337/results
+  * http://localhost:1337/maps
+  * http://localhost:1337/filters
+  * http://localhost:1337/search
+  * http://localhost:1337/acount
+  * http://localhost:1337/familyselect
+  * http://localhost:1337/login-patient
+  * http://localhost:1337/forgot-pass
+  * http://localhost:1337/patient-age
+  * http://localhost:1337/patient-location
+  * http://localhost:1337/family
+  * http://localhost:1337/patient-coverage
+  * http://localhost:1337/coverage-search
+  * http://localhost:1337/patient-loading
+* Press f12 to check mobile screen 
+
+
+
 ### Links
 
 ### Testing this
