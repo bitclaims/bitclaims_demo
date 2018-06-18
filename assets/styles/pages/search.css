@@ -1,0 +1,22 @@
+.search-container {
+  background-color: #ffffff;
+  height: 1000px;
+}
+
+.dropdown-row {
+  background-color: white;
+  height: 50px;
+  font-size: 16px;
+  color: #7c7f8f;
+  border-bottom: 1px solid #d3d4de;
+  display: flex;
+}
+
+.dropdown-pic {
+  font-size: 20px;
+  text-align: left;
+}
+
+.dropdown-text {
+  color: #595c6e;
+}
