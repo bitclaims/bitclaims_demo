@@ -1,0 +1,130 @@
+.account-container {
+  background-color: #f9fafb;
+  height: 1300px;
+}
+
+.greeting-container {
+  height: 50%;
+  font-size: 230%;
+  color: #2d11a6;
+  display: flex;
+  align-items: center;
+}
+
+.wave-pic {
+  width: 10%;
+  height: 58%;
+  margin-right: 2%;
+}
+
+.greeting-header {
+  height: 50%;
+  display: flex;
+  align-items: flex-start;
+  color: #595c6e;
+  font-size: 130%;
+}
+
+.grey-search-box {
+  background-color: white;
+  height: 42px;
+  width: 88%;
+  font-size: 90%;
+  color: #7c7f8f;
+  border: 1px solid #d3d4de;
+  border-radius: 4px;
+  box-shadow: 0 0 12px 0 rgba(211, 212, 222, 0.4);
+}
+
+.account-picture-container {
+  height: 22%;
+}
+
+.row-pictures-container {
+  height: 50%;
+  font-size: 230%;
+  display: flex;
+  align-items: center;
+}
+
+.row-picture-left-border {
+  height: 100%;
+  border-bottom: 1px solid #eeeff6;
+  border-right: 1px solid #eeeff6;
+}
+
+.row-picture-right-border {
+  height: 100%;
+  border-bottom: 1px solid #eeeff6;
+}
+
+.row-picture-bottom-container {
+  height: 50%;
+  display: flex;
+  align-items: flex-start;
+  font-size: 130%;
+}
+
+.row-picture-bottom-left-border {
+  height: 100%;
+  border-right: 1px solid #eeeff6;
+}
+
+.first-pic-container {
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-pic {
+  width: 30%;
+  height: 60%;
+  margin-right: 2%;
+}
+
+.picture-underheader {
+  height: 10%;
+  color: #937eea;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-updates {
+  height: 15%;
+}
+
+.calendar-container {
+  height: 40%;
+}
+
+.visits-text {
+  font-size: 140%;
+  color: #595c6e;
+}
+
+.visit-header {
+  color: #7c7f8f;
+  font-size: 107%;
+}
+
+.appointment-container {
+  height: 110%;
+  width: 95%;
+  margin-left: 2.5%;
+  background-color: white;
+}
+
+.lower-border {
+  height: 10%;
+  border-bottom: 1px solid #eeeff6;
+}
+
+.recent-activity-container {
+  height: 140%;
+  width: 95%;
+  margin-left: 2.5%;
+  background-color: white;
+}
