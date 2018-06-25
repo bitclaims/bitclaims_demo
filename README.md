@@ -24,6 +24,10 @@
 * Press f12 to check mobile screen 
 
 
+### Install
+* Run `sudo npm install node-cron`
+
+### Test
 
 ### Links
 
